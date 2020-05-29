@@ -66,7 +66,7 @@ class dynamic_convolution(_ConvNd):
 
 class BasicBlock(nn.Module):
     expansion = 1
-
+    '''直接替换resnet中的BasicBlock'''
     def __init__(self, inplanes, planes, stride=1, downsample=None, g=2):
         super(BasicBlock, self).__init__()
         self.g = g
@@ -106,7 +106,7 @@ class BasicBlock(nn.Module):
 
 class Bottleneck(nn.Module):
     expansion = 4
-
+    '''直接替换resnet中的Bottleneck'''
     def __init__(self, inplanes, planes, stride=1, downsample=None, g=2):
         super(Bottleneck, self).__init__()
         self.g = g
